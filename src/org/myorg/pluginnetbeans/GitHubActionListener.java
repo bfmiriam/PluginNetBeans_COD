@@ -27,8 +27,19 @@ import org.openide.util.NbBundle.Messages;
 )
 @ActionReference(path = "Menu/Tools", position = 0)
 @Messages("CTL_GitHubActionListener=GitHub")
-public final class GitHubActionListener implements ActionListener {
 
+    /**
+     * Clase que implementa el ActionListener
+     * y el método para poder crear repositorios remotos
+     */
+public final class GitHubActionListener implements ActionListener {
+        
+    /*
+    Este método nos permite crear un repositorio remoto en Github indicandole el 
+    nombre que deseamos poner. Las credenciales deben estar guardadas en un archivo 
+    del sistema. Para que funcione debemos descargar las librerias correspondientes.
+    */
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         try {
